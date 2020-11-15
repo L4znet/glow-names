@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #000;
+    svg {
+        width: 80%;
+        .names {
+            .firstname {
+                g {
+                    path {
+                        stroke-dashoffset: 0;
+                        stroke-dasharray: 0;
+                        animation: dash 2s linear;
+                        filter: url("#neon");
+                        stroke: rgb(89, 128, 212);
+                    }
+                }
+            }
+            .lastname {
+                g {
+                    path {
+                        stroke-dashoffset: 0;
+                        stroke-dasharray: 0;
+                        animation: dash 2s linear;
+                        filter: url("#neon");
+                        stroke: rgb(161, 42, 207);
+                    }
+
+                    @keyframes dash {
+                        from {
+                            stroke-dashoffset: 100;
+                            stroke-dasharray: 100;
+                        }
+                        to {
+                            stroke-dashoffset: 0;
+                            stroke-dasharray: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
